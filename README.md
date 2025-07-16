@@ -23,14 +23,6 @@
 - **Dependency Injection**: GetIt
 - **Local Storage**: SharedPreferences
 
-## Architecture
-
-The app follows Clean Architecture principles with clear separation of concerns:
-
-- **Presentation Layer**: UI Components and BLoCs
-- **Domain Layer**: Business Logic and Use Cases
-- **Data Layer**: Repositories and Data Sources
-
 ## APK
 
 [Download](https://drive.google.com/file/d/1mqq5ERoWDO74qlC51brohkfxGf8FclNs/view?usp=sharing)
