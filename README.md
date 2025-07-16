@@ -1,16 +1,36 @@
-# shopsy_assign
+# Shopsy
 
-A new Flutter project.
+## 📱 Preview
 
-## Getting Started
+<div align="center">
+  <img src="assets/Simulator Screenshot - iPhone 15 - 2025-07-15 at 23.43.08.png" width="200" alt="Product List"/>
+  <img src="assets/Simulator Screenshot - iPhone 15 - 2025-07-15 at 23.43.19.png" width="200" alt="Product Details"/>
+  <img src="assets/Simulator Screenshot - iPhone 15 - 2025-07-15 at 23.43.24.png" width="200" alt="Product Grid View"/>
+  <img src="assets/Simulator Screenshot - iPhone 15 - 2025-07-15 at 23.43.39.png" width="200" alt="Shopping Cart"/>
+</div>
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Product Browsing**: View products in an elegant grid layout
+- **Product Details**: Comprehensive product information
+- **Shopping Cart**: Add/remove items and manage quantities
+- **Persistence**: Cart data saved between sessions
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Dependencies used
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **State Management**: BLoC Pattern
+- **Navigation**: GoRouter
+- **Dependency Injection**: GetIt
+- **Local Storage**: SharedPreferences
+
+## 🏗 Architecture
+
+The app follows Clean Architecture principles with clear separation of concerns:
+
+- **Presentation Layer**: UI Components and BLoCs
+- **Domain Layer**: Business Logic and Use Cases
+- **Data Layer**: Repositories and Data Sources
+
+## 📱 Download APK
+
+[Download APK](https://drive.google.com/file/d/1mqq5ERoWDO74qlC51brohkfxGf8FclNs/view?usp=sharing)
