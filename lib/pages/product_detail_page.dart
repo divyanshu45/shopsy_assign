@@ -4,8 +4,6 @@ import 'package:get_it/get_it.dart';
 import 'package:shopsy_assign/bloc/cart/cart_bloc.dart';
 import 'package:shopsy_assign/bloc/cart/cart_event.dart';
 import 'package:shopsy_assign/bloc/cart/cart_state.dart';
-import 'package:shopsy_assign/bloc/product/product_bloc.dart';
-import 'package:shopsy_assign/bloc/product/product_event.dart';
 import 'package:shopsy_assign/bloc/product_detail/product_detail_bloc.dart';
 import 'package:shopsy_assign/models/product.dart';
 import 'package:shopsy_assign/repositories/product_repository.dart';
@@ -191,8 +189,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   const SizedBox(height: 16),
                   ElevatedButton(
                     onPressed: () {
-                      GetIt.I.get<ProductBloc>().add(
-                        LoadProductById(widget.productId),
+                      GetIt.I.get<ProductDetailBloc>().add(
+                        LoadProductDetail(widget.productId),
                       );
                     },
                     child: const Text('Retry'),
@@ -208,7 +206,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   }
 
   int _getCartQuantity(Product product) {
-    final cartState = GetIt.instance<CartBloc>().state;
+    final cartState = GetIt.I.get<CartBloc>().state;
     if (cartState is CartLoaded) {
       try {
         final cartItem = cartState.items.firstWhere(

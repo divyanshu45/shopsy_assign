@@ -102,7 +102,6 @@ class _CartPageState extends State<CartPage> {
                 ),
               );
             }
-
             return Column(
               children: [
                 Expanded(

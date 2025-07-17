@@ -121,28 +121,4 @@ class ProductRepository {
       return null;
     }
   }
-
-  Future<List<Product>> getProductsByCategory(String category) async {
-    try {
-      final products = await getProducts();
-      return products.where((product) => product.category == category).toList();
-    } catch (e) {
-      throw Exception('Failed to load products by category: $e');
-    }
-  }
-
-  Future<List<Product>> searchProducts(String query) async {
-    try {
-      final products = await getProducts();
-      return products
-          .where(
-            (product) =>
-                product.name.toLowerCase().contains(query.toLowerCase()) ||
-                product.description.toLowerCase().contains(query.toLowerCase()),
-          )
-          .toList();
-    } catch (e) {
-      throw Exception('Failed to search products: $e');
-    }
-  }
 }
